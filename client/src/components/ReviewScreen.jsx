@@ -83,7 +83,7 @@ function ReviewScreen({ answers, onEditSection, onBack, onReset }) {
   async function handleSubmit() {
     setSubmitting(true);
     try {
-      await fetch("http://localhost:5000/submit", {
+      await fetch("https://haiku-assignment-backend.onrender.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(answers),
