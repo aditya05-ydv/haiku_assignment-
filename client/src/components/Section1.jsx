@@ -75,14 +75,18 @@ function Section1({ answers, setAnswers, onContinue }) {
             How old were you when you first noticed hair loss?
           </p>
           <div className="flex items-center gap-2 max-w-[200px]">
-            <input
-              type="number"
-              value={answers.age_hair_loss_began || ""}
-              onChange={(e) =>
-                setAnswer("age_hair_loss_began", e.target.value)
-              }
-              className="border border-gray-200 rounded-lg p-2.5 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+           <input
+  type="number"
+  min="0"
+  value={answers.age_hair_loss_began || ""}
+  onChange={(e) => {
+    const val = e.target.value;
+    if (val === "" || Number(val) >= 0) {
+      setAnswer("age_hair_loss_began", val);
+    }
+  }}
+  className="border border-gray-200 rounded-lg p-2.5 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+/>
             <span className="text-gray-500 text-sm">years old</span>
           </div>
         </div>
