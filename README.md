@@ -14,7 +14,7 @@ not be comfortable with complicated forms or conversational interfaces.
 
 ## Live Demo
 
-[Add deployed URL here]
+[https://haiku-assignment.vercel.app/](https://haiku-assignment.vercel.app/)
 
 ---
 
